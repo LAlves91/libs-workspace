@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "lib-business/*": [
+        "projects/lib-business/*"
+      ],
+      "lib-core": [
+        "dist/lib-core/*",
+        "dist/lib-core/lib-core"
+      ],
+      "lib-core/*": [
+        "dist/lib-core/*",
+        "dist/lib-core/lib-core"
+      ]
+    }
+  },
+  "exclude": [
+    "src/test.ts",
+    "**/*.spec.ts"
+  ]
+}

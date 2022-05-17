@@ -9,6 +9,22 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
+    "paths": {
+      "lib-business": [
+        "dist/lib-business/*",
+        "dist/lib-business/lib-business"
+      ],
+      "lib-business/*": [
+        "dist/lib-business/*"
+      ],
+      "lib-core": [
+        "dist/lib-core/*",
+        "dist/lib-core/lib-core"
+      ],
+      "lib-core/*": [
+        "dist/lib-core/*"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

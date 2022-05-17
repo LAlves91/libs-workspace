@@ -3,5 +3,68 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "lib-core": {
+      "projectType": "library",
+      "root": "projects/lib-core",
+      "sourceRoot": "projects/lib-core/src",
+      "prefix": "cor",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-core/src/test.ts",
+            "tsConfig": "projects/lib-core/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-core/karma.conf.js"
+          }
+        }
+      }
+    },
+    "lib-business": {
+      "projectType": "library",
+      "root": "projects/lib-business",
+      "sourceRoot": "projects/lib-business/src",
+      "prefix": "bsn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-business/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-business/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-business/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-business/src/test.ts",
+            "tsConfig": "projects/lib-business/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-business/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "lib-core"
 }
